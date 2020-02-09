@@ -1,1 +1,9 @@
-<p>edit works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <p>Edit store</p>
+    <label>Store Name</label>
+    <input type="text" class="form-control" #storeName>
+    <br/>
+    <button class="btn btn-primary" (click)="addOrUpdateStore(storeName)">Add/Update</button>
+  </div>
+</div>

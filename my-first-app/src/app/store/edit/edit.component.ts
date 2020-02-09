@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-edit',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  @Output() storeCreated = new EventEmitter<{storeName: string}>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addOrUpdateStore(nameInput: HTMLInputElement) {
+    console.log(nameInput.value);
+    this.storeCreated.emit({
+      storeName: nameInput.value
+    });
   }
 
 }

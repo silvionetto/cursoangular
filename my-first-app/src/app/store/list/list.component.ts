@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from './../../shared/store.model';
 
 @Component({
   selector: 'app-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+
+  stores = [new Store(1, 'Store Name')];
 
   constructor() { }
 
